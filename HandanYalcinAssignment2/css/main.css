@@ -1,0 +1,115 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    height: 100%;
+    font-family: 'Andale Mono', Monaco, monospace;
+    font-size: 20px;
+}
+
+body > * {
+    padding: 10px;
+}
+
+/* add media queries for landscape and portrait */
+
+@media only screen and (orientation: landscape) {
+    body {
+	display: grid;
+	grid-template-areas: "header header" "main main" "footer footer";
+    }
+    
+    header {
+	grid-area: header;
+	text-align: center; 
+	color: rgb(40, 254, 20);
+	background: black;
+	z-index: 1;
+	box-shadow: 0 0 6px 0 whitesmoke;
+    }
+
+    main {
+	grid-area: main;
+	background: midnightblue;
+	color: white;
+	overflow: scroll;
+    }
+
+    main ul {
+	list-style-type: none;
+	padding: 0px;
+	margin: 0;
+	text-align: center;
+    }
+
+    main ul > li {
+    }
+
+    main ul > li a {
+	vertical-align: middle;
+    }
+    
+    main ul > li img {
+	vertical-align: middle;
+    }
+
+    footer {
+	grid-area: footer;
+	text-align: center;
+	color: rgb(40, 254, 20);
+	background: black;
+	z-index: 1;
+	box-shadow: 0 0 6px 0 whitesmoke;
+    }
+}
+
+
+@media only screen and (orientation: portrait) {
+    body {
+	display: grid;
+	grid-template-areas: "header header" "main main" "footer footer";
+    }
+    
+    header {
+	grid-area: header;
+	text-align: center; 
+	color: rgb(40, 254, 20);
+	background: black;
+	z-index: 1;
+	box-shadow: 0 0 6px 0 whitesmoke;
+    }
+
+    main {
+	grid-area: main;
+	text-align: center;
+	background: midnightblue;
+	color: white;
+	overflow: scroll;
+    }
+
+    main ul {
+	list-style-type: none;
+	padding: 0px;
+	margin: 0;
+	text-align: center;
+    }
+
+    main ul > li a {
+	vertical-align: middle;
+    }
+    
+    main ul > li img {
+	vertical-align: middle;
+    }
+
+    footer {
+	grid-area: footer;
+	text-align: center;
+	color: rgb(40, 254, 20);
+	background: black;
+	z-index: 1;
+	box-shadow: 0 0 6px 0 whitesmoke;
+    }
+}
